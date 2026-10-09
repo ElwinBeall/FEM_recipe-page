@@ -81,6 +81,18 @@ body {
     font-size: 1.75em;
     margin: 1em;
   }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  tr:not(:last-child) {
+    margin: 40px 0;
+    border-bottom: 2px solid var(--stone150); 
+  }
+  .data-highlighted {
+    color: var(--brown800);
+    font-weight: var(--semibold);
+  }
 }
 
 .recipe-image {
@@ -103,7 +115,7 @@ body {
     375px: mobile
     1440px: desktop
 
-    may need to update query for mobile
+    need to update query selectors
 */
 @media (min-width: 540px) {
   .social-card {
