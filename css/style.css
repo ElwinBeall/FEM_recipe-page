@@ -1,0 +1,117 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* colors */
+  --white: hsl(0, 0%, 100%); /* panel background */
+  --stone100: hsl(30, 54%, 90%); /* page background */
+  --stone150: hsl(30, 18%, 87%); /* horizontal rules */
+  --stone600: hsl(30, 10%, 34%); /* text */
+  --stone900: hsl(24, 5%, 18%); /* panel title */
+  --brown800: hsl(14, 45%, 36%); /* headings, enumeration, values */
+  --rose800: hsl(332, 51%, 32%); /* headings, prep time card */
+  --rose50: hsl(330, 100%, 98%); /* background, prep time card */
+
+  /* font weights */
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
+}
+
+/*
+EVERYTHING BELOW NEEDS UPDATING
+
+panel width: 736px
+*/
+
+
+html {
+  color: var(--stone600);
+  max-width: 1440px;
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  font-weight: var(--regular);
+  background: var(--stone100);
+}
+
+body {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  background: var(--white);
+  width: 736px;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 20px;
+  p {
+    line-height: 1.5;
+    margin: 0.5em 0;
+    }
+  hr {
+    margin: 40px 0;
+    color: var(--rose50);
+  }
+}
+
+.prep-card{
+  background: var(--rose50);
+  padding: 20px;
+  margin: 20px 0;
+  h3 {
+    color: var(--rose800);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.recipe-card {
+  h2 {
+    color: var(--brown800);
+    font-family: "Young Serif", serif;
+    font-weight: var(--regular);
+    font-size: 1.75em;
+    margin: 1em;
+  }
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.title {
+  font-family: "Young Serif", serif;
+  font-size: 2.5em;
+  font-weight: var(--regular);
+  margin: 0.5em 0;
+  color: var(--stone900);
+}
+
+
+
+/* Design widths:  
+    375px: mobile
+    1440px: desktop
+
+    may need to update query for mobile
+*/
+@media (min-width: 540px) {
+  .social-card {
+    width: 384px;
+    height: 612px;
+    padding: 40px;
+  }
+  .link-container .btn {
+    width: 304px;
+  }
+}
